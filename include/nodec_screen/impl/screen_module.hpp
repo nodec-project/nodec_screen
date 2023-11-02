@@ -4,7 +4,6 @@
 #include "../screen.hpp"
 
 #include <nodec/signals/signal.hpp>
-#include <nodec/logging.hpp>
 
 namespace nodec_screen {
 namespace impl {
@@ -16,9 +15,7 @@ public:
     using TitleChangedSignal = nodec::signals::Signal<void(ScreenModule&, const std::string&)>;
 
 public:
-    ScreenModule() {
-        nodec::logging::InfoStream(__FILE__, __LINE__) << "[ScreenModule] >>> Created!";
-    };
+    ScreenModule() {}
 
     nodec::Vector2i resolution() const noexcept override {
         return internal_resolution;
