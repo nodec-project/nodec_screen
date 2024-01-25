@@ -19,6 +19,8 @@ public:
     virtual std::string title() const noexcept = 0;
     virtual void set_title(const std::string &title) = 0;
 
+    virtual nodec::Vector2f position() const noexcept = 0;
+
 private:
     NODEC_DISABLE_COPY(Screen)
 };
